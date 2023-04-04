@@ -12,13 +12,4 @@
 				<span>Price: $150.00</span>
 				<a class="add-to-cart" href="#">Add To Cart</a>
 			</div> -->
-            <!-- <a class='add-to-cart' name='submit' href='?action=addToCart&product=>'>Add To Cart</a> -->
-
-            <?php
-             if(!($_SESSION['cart']))
-             {
-                 $_SESSION['cart']=array();
-                
-             }
-            ?>
-           
+            <!-- <a class='add-to-cart' name='submit' href='?action=addToCart&product=<?php echo $key ?>'>Add To Cart</a> -->

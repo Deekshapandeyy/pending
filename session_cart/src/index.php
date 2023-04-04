@@ -9,7 +9,6 @@ include "config.php"
 		Home
 	</title>
 	<link href="style.css" type="text/css" rel="stylesheet">
-	<link href="./CSS/style.css?v=<?php echo time()?>" type="text/css" rel="stylesheet">
 </head>
 <body>
 	

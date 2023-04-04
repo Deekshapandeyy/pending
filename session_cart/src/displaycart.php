@@ -1,17 +1,18 @@
 <?php
-
-
-echo "<table><thead><tr><th>Image</th><th>Name</th><th>Quantity</th><Th>Price</th><th>Action</th></tr></thead><tbody>"
-;
+session_start();
+$i=0;
 		foreach ($_SESSION['cart'] as $key => $value) {
-			echo "<tr><td><img src='$value[image]'></td>";
-			echo "<td>$value[name]</td>";
-			echo "<td>$value[quantity]</td>";
-			echo "<td>$value[price]</td>";
-			echo "<td><button type='submit' value='Remove'>X</button></td></tr>";
+				echo "<tr><td><img src='".$_SESSION['cart'][$key]['pimg']."'></td>";
+				echo "<td>".$_SESSION['cart'][$key]['pname']."</td>";
+				echo "<td>". $_SESSION['cart'][$key]['pquantity'] ."</td>";
+				echo "<td>". $_SESSION['cart'][$key]['pprice'] ."</td>";
+				echo "<td><form  action='#' method='POST'><input type='submit' class='remove' value='Remove' name='remove'><input type='hidden' name='hidden' value='" . $i . "'></form></td></tr>";
+				$i++;
 
 			}
 
+			// add to cart
+			
 
 
 ?>
